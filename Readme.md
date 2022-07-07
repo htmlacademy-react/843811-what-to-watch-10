@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть»
 
 * Студент: [Роман Покидов](https://up.htmlacademy.ru/react/10/user/843811).
-* Наставник: [Константин Антонов](https://htmlacademy.ru/profile/rawle51)gi.
+* Наставник: [Константин Антонов](https://htmlacademy.ru/profile/rawle51).
 
 ---
 
