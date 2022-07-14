@@ -12,7 +12,7 @@ export type FilmMock = {
   runTime: number;
   genre: string;
   released: number;
-  id: number;
+  id: string;
   isFavorite: boolean;
   videoLink: string;
   previewVideoLink: string;

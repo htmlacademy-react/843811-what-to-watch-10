@@ -19,7 +19,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 104,
     genre: 'Comedy',
     released: 2000,
-    id: 1,
+    id: '1',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -42,7 +42,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 167,
     genre: 'Crime',
     released: 2002,
-    id: 2,
+    id: '2',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -65,7 +65,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 116,
     genre: 'Adventure',
     released: 2005,
-    id: 3,
+    id: '3',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
@@ -88,7 +88,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 88,
     genre: 'Comedy',
     released: 2003,
-    id: 4,
+    id: '4',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
@@ -111,7 +111,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 91,
     genre: 'Adventure',
     released: 2007,
-    id: 5,
+    id: '5',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -134,7 +134,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 30,
     genre: 'Comedy',
     released: 2019,
-    id: 6,
+    id: '6',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
@@ -157,7 +157,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 94,
     genre: 'Adventure',
     released: 2012,
-    id: 7,
+    id: '7',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -180,7 +180,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 170,
     genre: 'Drama',
     released: 2014,
-    id: 8,
+    id: '8',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -203,7 +203,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 94,
     genre: 'Drama',
     released: 1992,
-    id: 9,
+    id: '9',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -226,7 +226,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 119,
     genre: 'Adventure',
     released: 2000,
-    id: 10,
+    id: '10',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
@@ -249,7 +249,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 138,
     genre: 'Thriller',
     released: 2010,
-    id: 11,
+    id: '11',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -272,7 +272,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 92,
     genre: 'Action',
     released: 2008,
-    id: 12,
+    id: '12',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
@@ -295,7 +295,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 136,
     genre: 'Adventure',
     released: 1997,
-    id: 13,
+    id: '13',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bike.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -318,7 +318,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 153,
     genre: 'Crime',
     released: 1994,
-    id: 14,
+    id: '14',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
@@ -341,7 +341,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 113,
     genre: 'Drama',
     released: 2015,
-    id: 15,
+    id: '15',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -364,7 +364,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 229,
     genre: 'Crime',
     released: 1984,
-    id: 16,
+    id: '16',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -387,7 +387,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 112,
     genre: 'Action',
     released: 2016,
-    id: 17,
+    id: '17',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -410,7 +410,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 112,
     genre: 'Drama',
     released: 2011,
-    id: 18,
+    id: '18',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -433,7 +433,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 134,
     genre: 'Drama',
     released: 2018,
-    id: 19,
+    id: '19',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
@@ -456,7 +456,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 136,
     genre: 'Action',
     released: 1999,
-    id: 20,
+    id: '20',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bike.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -479,7 +479,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 156,
     genre: 'Action',
     released: 2015,
-    id: 21,
+    id: '21',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
@@ -502,7 +502,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 134,
     genre: 'Fantasy',
     released: 2018,
-    id: 22,
+    id: '22',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bike.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -525,7 +525,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 132,
     genre: 'Crime',
     released: 2015,
-    id: 23,
+    id: '23',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
@@ -548,7 +548,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 136,
     genre: 'Drama',
     released: 2018,
-    id: 24,
+    id: '24',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bike.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
@@ -571,7 +571,7 @@ export const filmsMock: FilmMock[] = [
     runTime: 122,
     genre: 'Crime',
     released: 2007,
-    id: 25,
+    id: '25',
     isFavorite: false,
     videoLink: 'https://10.react.pages.academy/static/film/video/bike.mp4',
     previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'

@@ -1,25 +1,27 @@
+import { Link } from 'react-router-dom';
+
 type RenderFilmsCardProps = {
   name: string,
   previewImage: string,
+  id: string,
 }
 
-
-const RenderFilmsCard = ({name, previewImage}: RenderFilmsCardProps) => (
+const RenderFilmsCard = ({ name, previewImage, id }: RenderFilmsCardProps) => (
   <article className="small-film-card catalog__films-card">
-    <div className="small-film-card__image">
-      <img
-        src={previewImage}
-        alt={name}
-        width={280}
-        height={175}
-      />
-    </div>
-    <h3 className="small-film-card__title">
-      <a className="small-film-card__link" href="film-page.html">
+    <Link className="small-film-card__link" to={`/film/${id}`}>
+      <div className="small-film-card__image">
+        <img
+          src={previewImage}
+          alt={name}
+          width={280}
+          height={175}
+        />
+      </div>
+      <h3 className="small-film-card__title">
         {name}
-      </a>
-    </h3>
-  </article>
+      </h3>
+    </Link>
+  </article >
 );
 
 export default RenderFilmsCard;

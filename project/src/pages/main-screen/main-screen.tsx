@@ -5,13 +5,11 @@ import RenderHeaderFillmCard from '../../components/render-header-film-card/rend
 const MainScreen = () => (
   <>
     <div className="visually-hidden">
-      {/* inject:svg */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <symbol id="add" viewBox="0 0 19 20">
-          {/* Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch */}
           <title>+</title>
           <desc>Created with Sketch.</desc>
           <g
@@ -75,7 +73,6 @@ const MainScreen = () => (
               fill="#EEE5B5"
             />
           </symbol>
-          {/* Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch */}
           <title>Artboard</title>
           <desc>Created with Sketch.</desc>
           <g
@@ -100,7 +97,6 @@ const MainScreen = () => (
           </g>
         </symbol>
       </svg>
-      {/* endinject */}
     </div>
     <RenderHeaderFillmCard {...filmsMock[0]} />
     <div className="page-content">
