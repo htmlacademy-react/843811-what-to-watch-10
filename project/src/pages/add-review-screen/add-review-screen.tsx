@@ -1,11 +1,19 @@
 import { useParams } from 'react-router-dom';
-import { filmsMock } from '../../mock/mocks';
+import { useState } from 'react';
+import { FilmMock } from '../../types/film-type-mock';
 
-const AddReviewScreen = () => {
+type AddReviewScreenProps = {
+  films: FilmMock[];
+}
+
+const AddReviewScreen = ({films}: AddReviewScreenProps) => {
 
   const { id } = useParams();
-  const film = filmsMock.find((element) => element.id === id);
+  const film = films.find((element) => element.id === id);
   const style = { background: film?.backgroundColor };
+  const [comment, setState] = useState('');
+
+  // const hadleChange = (event) => setState({ value: event?.target.value });
 
   return (
     <section className="film-card film-card--full" style={style}>
@@ -175,7 +183,8 @@ const AddReviewScreen = () => {
               name="review-text"
               id="review-text"
               placeholder="Review text"
-              defaultValue={''}
+              defaultValue={comment}
+              onChange={(evt) => setState(evt.target.value)}
             />
             <div className="add-review__submit">
               <button className="add-review__btn" type="submit">
