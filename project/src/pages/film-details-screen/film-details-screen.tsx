@@ -1,11 +1,15 @@
 import { useParams } from 'react-router-dom';
-import { filmsMock } from '../../mock/mocks';
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
+import { FilmMock } from '../../types/film-type-mock';
 
-const FilmDetailsScreen = () => {
+type FilmDetailsScreenProps = {
+  films: FilmMock[];
+}
+
+const FilmDetailsScreen = ({ films }: FilmDetailsScreenProps) => {
   const { id } = useParams();
-  const film = filmsMock.find((element) => element.id === id);
+  const film = films.find((element) => element.id === id);
   const style = { background: film?.backgroundColor };
 
   return (
@@ -51,20 +55,18 @@ const FilmDetailsScreen = () => {
                 <span className="film-card__year">{film?.released}</span>
               </p>
               <div className="film-card__buttons">
-                <button className="btn btn--play film-card__button" type="button">
+                <Link to={`/player/${id}`} className="btn btn--play film-card__button">
                   <svg viewBox="0 0 19 19" width={19} height={19}>
                     <use xlinkHref="#play-s" />
                   </svg>
                   <span>Play</span>
-                </button>
-                <Link to={AppRoute.MyList}>
-                  <button className="btn btn--list film-card__button" type="button">
-                    <svg viewBox="0 0 18 14" width={18} height={14}>
-                      <use xlinkHref="#in-list" />
-                    </svg>
-                    <span>My list</span>
-                    <span className="film-card__count">9</span>
-                  </button>
+                </Link>
+                <Link to={AppRoute.MyList} className="btn btn--list film-card__button">
+                  <svg viewBox="0 0 18 14" width={18} height={14}>
+                    <use xlinkHref="#in-list" />
+                  </svg>
+                  <span>My list</span>
+                  <span className="film-card__count">9</span>
                 </Link>
                 <Link to={`/film/${id}/review`} className="btn film-card__button">
                   Add review

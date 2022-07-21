@@ -8,13 +8,18 @@ import PlayerScreen from '../../pages/player-screen/player-screen';
 import MyListScreen from '../../pages/my-list-screen/my-list-screen';
 import FilmDetailsScreen from '../../pages/film-details-screen/film-details-screen';
 import PrivateRoute from '../private-route/private-route';
+import { FilmMock } from '../../types/film-type-mock';
 
-const App = () => (
+type AppProps = {
+  films: FilmMock[];
+}
+
+const App = ({ films }: AppProps) => (
   <BrowserRouter >
     <Routes>
       <Route
         path={AppRoute.Main}
-        element={<MainScreen />}
+        element={<MainScreen films={films} />}
       />
       <Route
         path={AppRoute.SignIn}
@@ -22,7 +27,7 @@ const App = () => (
       />
       <Route
         path={AppRoute.Player}
-        element={<PlayerScreen />}
+        element={<PlayerScreen films={films} />}
       />
       <Route
         path={AppRoute.MyList}
@@ -36,11 +41,11 @@ const App = () => (
       />
       <Route
         path={AppRoute.Film}
-        element={<FilmDetailsScreen />}
+        element={<FilmDetailsScreen films={films} />}
       />
       <Route
         path={AppRoute.AddReview}
-        element={<AddReviewScreen />}
+        element={<AddReviewScreen films={films} />}
       />
       <Route
         path='*'

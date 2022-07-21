@@ -1,8 +1,12 @@
 import RenderFilmsCard from '../../components/render-films-card/render-films-card';
-import { filmsMock } from '../../mock/mocks';
 import RenderHeaderFillmCard from '../../components/render-header-film-card/render-header-film-card';
+import { FilmMock } from '../../types/film-type-mock';
 
-const MainScreen = () => (
+type MainScreenProps = {
+  films: FilmMock[];
+}
+
+const MainScreen = ({films}: MainScreenProps) => (
   <>
     <div className="visually-hidden">
       <svg
@@ -98,7 +102,7 @@ const MainScreen = () => (
         </symbol>
       </svg>
     </div>
-    <RenderHeaderFillmCard {...filmsMock[0]} />
+    <RenderHeaderFillmCard {...films[0]} />
     <div className="page-content">
       <section className="catalog">
         <h2 className="catalog__title visually-hidden">Catalog</h2>
@@ -155,7 +159,7 @@ const MainScreen = () => (
           </li>
         </ul>
         <div className="catalog__films-list">
-          {filmsMock.map((item) => (<RenderFilmsCard key={item.id} {...item} />))}
+          {films.map((item) => (<RenderFilmsCard key={item.id} {...item} />))}
         </div>
         <div className="catalog__more">
           <button className="catalog__button" type="button">
