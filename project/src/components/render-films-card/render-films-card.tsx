@@ -8,9 +8,10 @@ type RenderFilmsCardProps = {
   previewVideoLink: string
 }
 
+const PLAYBACK_DELAY = 1000;
+
 const RenderFilmsCard = ({ name, previewImage, id, previewVideoLink }: RenderFilmsCardProps) => {
   const [isPlayingVideo, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -19,39 +20,54 @@ const RenderFilmsCard = ({ name, previewImage, id, previewVideoLink }: RenderFil
       return;
     }
 
-    videoRef.current.addEventListener('loadeddata', () => setIsLoading(false));
-
-
-    if (isPlayingVideo && !isLoading) {
-      videoRef.current.play();
-      videoRef.current.src = previewVideoLink;
+    if (!isPlayingVideo) {
+      videoRef.current.load();
       return;
     }
 
-    videoRef.current.src = '';
-    videoRef.current.pause();
-    videoRef.current.currentTime = 0;
-  });
+    const currentVideoRef = videoRef.current;
+
+    const timerID = setTimeout(() => {
+      if (currentVideoRef === null) {
+        return;
+      }
+
+      if (isPlayingVideo) {
+        currentVideoRef.play();
+      }
+    }, PLAYBACK_DELAY);
+
+    const mouseOutHandler = () => {
+      currentVideoRef.pause();
+      clearTimeout(timerID);
+      setIsPlaying(!isPlayingVideo);
+    };
+
+    currentVideoRef.addEventListener('mouseout', mouseOutHandler);
+
+    return () => {
+      if (currentVideoRef === null) {
+        return;
+      }
+      currentVideoRef.removeEventListener('mouseout', mouseOutHandler);
+    };
+  }, [isPlayingVideo]);
 
   return (
     <article className="small-film-card catalog__films-card">
       <Link className="small-film-card__link" to={`/film/${id}`}>
-        <div className="small-film-card__image"
+        <video
           onMouseEnter={() => setIsPlaying(true)}
-          onMouseLeave={() => setIsPlaying(false)}
+          poster={previewImage}
+          className="player__video"
+          loop
+          muted
+          width={280}
+          height={175}
+          ref={videoRef}
+          src={previewVideoLink}
         >
-          <video
-            src={previewVideoLink}
-            poster={previewImage}
-            loop
-            muted
-            autoPlay
-            width={280}
-            height={175}
-            ref={videoRef}
-          >
-          </video>
-        </div>
+        </video>
         <h3 className="small-film-card__title">
           {name}
         </h3>
