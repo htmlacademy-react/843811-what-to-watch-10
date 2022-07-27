@@ -26,7 +26,6 @@ const RenderFilmsCard = ({ name, previewImage, id, previewVideoLink }: RenderFil
     }
 
     const currentVideoRef = videoRef.current;
-
     const timerID = setTimeout(() => {
       if (currentVideoRef === null) {
         return;
@@ -35,29 +34,22 @@ const RenderFilmsCard = ({ name, previewImage, id, previewVideoLink }: RenderFil
       if (isPlayingVideo) {
         currentVideoRef.play();
       }
+
     }, PLAYBACK_DELAY);
 
-    const mouseOutHandler = () => {
+    return () => {
       currentVideoRef.pause();
       clearTimeout(timerID);
       setIsPlaying(!isPlayingVideo);
     };
-
-    currentVideoRef.addEventListener('mouseout', mouseOutHandler);
-
-    return () => {
-      if (currentVideoRef === null) {
-        return;
-      }
-      currentVideoRef.removeEventListener('mouseout', mouseOutHandler);
-    };
-  }, [isPlayingVideo]);
+  });
 
   return (
     <article className="small-film-card catalog__films-card">
       <Link className="small-film-card__link" to={`/film/${id}`}>
         <video
           onMouseEnter={() => setIsPlaying(true)}
+          onMouseLeave={() => setIsPlaying(false)}
           poster={previewImage}
           className="player__video"
           loop

@@ -16,7 +16,7 @@ const AddReviewScreen = ({ films }: AddReviewScreenProps) => {
   const style = { background: film?.backgroundColor };
   const [comment, setState] = useState('');
 
-  if (film === undefined) {
+  if (!film) {
     return < Navigate to='*' />;
   }
 

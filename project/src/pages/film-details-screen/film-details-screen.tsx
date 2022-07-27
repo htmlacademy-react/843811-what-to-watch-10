@@ -12,7 +12,7 @@ const FilmDetailsScreen = ({ films }: FilmDetailsScreenProps) => {
   const film = films.find((element) => element.id === id);
   const style = { background: film?.backgroundColor };
 
-  if (film === undefined) {
+  if (!film) {
     return < Navigate to='*' />;
   }
 
