@@ -1,19 +1,24 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { FilmMock } from '../../types/film-type-mock';
+import { Navigate } from 'react-router-dom';
+
 
 type AddReviewScreenProps = {
   films: FilmMock[];
 }
 
-const AddReviewScreen = ({films}: AddReviewScreenProps) => {
+const AddReviewScreen = ({ films }: AddReviewScreenProps) => {
 
   const { id } = useParams();
   const film = films.find((element) => element.id === id);
+
   const style = { background: film?.backgroundColor };
   const [comment, setState] = useState('');
 
-  // const hadleChange = (event) => setState({ value: event?.target.value });
+  if (!film) {
+    return < Navigate to='*' />;
+  }
 
   return (
     <section className="film-card film-card--full" style={style}>

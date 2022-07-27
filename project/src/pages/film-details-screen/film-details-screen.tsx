@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
 import { FilmMock } from '../../types/film-type-mock';
@@ -11,6 +11,10 @@ const FilmDetailsScreen = ({ films }: FilmDetailsScreenProps) => {
   const { id } = useParams();
   const film = films.find((element) => element.id === id);
   const style = { background: film?.backgroundColor };
+
+  if (!film) {
+    return < Navigate to='*' />;
+  }
 
   return (
     <>
