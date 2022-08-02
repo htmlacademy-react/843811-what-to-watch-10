@@ -1,4 +1,4 @@
-export type FilmMock = {
+export type Films = {
   name: string;
   posterImage: string;
   previewImage: string;

@@ -1,6 +1,6 @@
-import { FilmMock } from '../types/film-type-mock';
+import { Films } from '../types/film-type-mock';
 
-export const filmsMock: FilmMock[] = [
+export const filmsMock: Films[] = [
   {
     name: 'Snatch',
     posterImage: 'https://10.react.pages.academy/static/film/poster/Snatch.jpg',
@@ -293,7 +293,7 @@ export const filmsMock: FilmMock[] = [
       'BD Wong'
     ],
     runTime: 136,
-    genre: 'Adventure',
+    genre: 'Thrillers',
     released: 1997,
     id: '13',
     isFavorite: false,
@@ -339,7 +339,7 @@ export const filmsMock: FilmMock[] = [
       'Jack Madigan'
     ],
     runTime: 113,
-    genre: 'Drama',
+    genre: 'Sci-Fi',
     released: 2015,
     id: '15',
     isFavorite: false,
@@ -431,7 +431,7 @@ export const filmsMock: FilmMock[] = [
       'Gwilym Lee'
     ],
     runTime: 134,
-    genre: 'Drama',
+    genre: 'Romance',
     released: 2018,
     id: '19',
     isFavorite: false,
@@ -477,7 +477,7 @@ export const filmsMock: FilmMock[] = [
       'Will Poulter'
     ],
     runTime: 156,
-    genre: 'Action',
+    genre: 'Kids and Family',
     released: 2015,
     id: '21',
     isFavorite: false,
@@ -500,7 +500,7 @@ export const filmsMock: FilmMock[] = [
       'Dan Fogler'
     ],
     runTime: 134,
-    genre: 'Fantasy',
+    genre: 'Horror',
     released: 2018,
     id: '22',
     isFavorite: false,
@@ -523,7 +523,7 @@ export const filmsMock: FilmMock[] = [
       'Taron Egerton'
     ],
     runTime: 132,
-    genre: 'Crime',
+    genre: 'Documentary',
     released: 2015,
     id: '23',
     isFavorite: false,

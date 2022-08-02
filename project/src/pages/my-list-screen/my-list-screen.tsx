@@ -1,4 +1,4 @@
-import RenderFilmsCard from '../../components/render-films-card/render-films-card';
+import RenderFilmsCard from '../../components/render-films-list.tsx/render-films-card/render-films-card';
 import { filmsMock } from '../../mock/mocks';
 
 const MyListScreen = () => (
