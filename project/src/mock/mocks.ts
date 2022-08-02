@@ -1,6 +1,6 @@
-import { FilmMock } from '../types/film-type-mock';
+import { Films } from '../types/film-type-mock';
 
-export const filmsMock: FilmMock[] = [
+export const filmsMock: Films[] = [
   {
     name: 'Snatch',
     posterImage: 'https://10.react.pages.academy/static/film/poster/Snatch.jpg',

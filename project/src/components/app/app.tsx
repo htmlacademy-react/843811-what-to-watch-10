@@ -8,10 +8,10 @@ import PlayerScreen from '../../pages/player-screen/player-screen';
 import MyListScreen from '../../pages/my-list-screen/my-list-screen';
 import FilmDetailsScreen from '../../pages/film-details-screen/film-details-screen';
 import PrivateRoute from '../private-route/private-route';
-import { FilmMock } from '../../types/film-type-mock';
+import { Films } from '../../types/film-type-mock';
 
 type AppProps = {
-  films: FilmMock[];
+  films: Films[];
 }
 
 const App = ({ films }: AppProps) => (

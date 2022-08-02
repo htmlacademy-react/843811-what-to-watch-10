@@ -1,8 +1,8 @@
-import { FilmMock } from '../../types/film-type-mock';
+import { Films } from '../../types/film-type-mock';
 import { useParams } from 'react-router-dom';
 
 type playerScreenProps = {
-  films: FilmMock[];
+  films: Films[];
 }
 
 const PlayerScreen = ({films}: playerScreenProps) => {

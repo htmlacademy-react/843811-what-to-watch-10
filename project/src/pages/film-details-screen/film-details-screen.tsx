@@ -1,10 +1,10 @@
 import { Navigate, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
-import { FilmMock } from '../../types/film-type-mock';
+import { Films } from '../../types/film-type-mock';
 
 type FilmDetailsScreenProps = {
-  films: FilmMock[];
+  films: Films[];
 }
 
 const FilmDetailsScreen = ({ films }: FilmDetailsScreenProps) => {

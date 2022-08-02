@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import { FilmMock } from '../../types/film-type-mock';
+import { Films } from '../../types/film-type-mock';
 import { Navigate } from 'react-router-dom';
 
 
 type AddReviewScreenProps = {
-  films: FilmMock[];
+  films: Films[];
 }
 
 const AddReviewScreen = ({ films }: AddReviewScreenProps) => {
